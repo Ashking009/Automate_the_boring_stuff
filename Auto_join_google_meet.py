@@ -6,6 +6,8 @@
 # put meeting link in line 17 , your gmail in line 23 and password in line 25
 # Thats it you are ready to rock
 
+# Additionally you can add this script to the task scheduler(windows) to run it automatically at time of meeting
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
