@@ -2,8 +2,8 @@
 # As google won't let you login from an automated script so used stackoverflow insted of Google
 # Only dependency needed is selenium (pip install selenium) and 
 # chromedriver(As I used Chrome browser for this download it from https://chromedriver.chromium.org/ 
-# extract the zip from above link and paste the path at line 14 executable_path = " path " like  C:\Drivers\chromedriver.exe
-# put meeting link in line 17 , your gmail in line 23 and password in line 25
+# extract the zip from above link and paste the path at line 17 executable_path = " path " like  "C:\Drivers\chromedriver.exe"
+# put meeting link in line 19 , your gmail in line 25 and password in line 27
 # Thats it you are ready to rock
 
 # Additionally you can add this script to the task scheduler(windows) to run it automatically at time of meeting
@@ -26,7 +26,9 @@ wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"identifierId\"]"))).
 driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/div[2]').click()
 wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"password\"]/div[1]/div/div[1]/input"))).send_keys("Your Password")
 driver.find_element_by_xpath("//*[@id=\"passwordNext\"]/div/button/div[2]").click()
-time.sleep(10) # important it takes time to load Stackoverflow so adjust according to your internet speed 
+
+# important it takes time to load Stackoverflow so adjust according to your internet speed(time in sec)
+time.sleep(10) 
 
 # Opening Meeting after logging in
 driver.get(meet_link)
